@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  /* colors */
+
+  /* principal */
+  --color-primary: #2c7ef8;
+  --color-primary-hover-light: #075cd9;
+  --color-on-primary-light: #ffffff;
+
+  /* context and superficial color */
+  --color-background-light: #ffffff;
+  --color-on-background-light: #191c1e;
+  --color-surface-light: #ffffff;
+
+  /* errors and successes */
+  --color-errors: #e63946;
+  --color-success: #90f677;
+
+  /* neutral; */
+  --color-neutral-1: #000000;
+    --color-neutral-2: #323233;
+    --color-neutral-3: #646466;
+    --color-neutral-4: #7D7D7F;
+    --color-neutral-5: #AFAEB2;
+    --color-neutral-6: #C8C7CB;
+    --color-neutral-7: #E1E0E5;
+    --color-neutral-8: #E1E0E5;
+    --color-neutral-9: #F5F6F8;
+    --color-neutral-10: #FEFEFE;
+    --color-neutral-11: #FFFFFF;
+    
+    
+    /* fonts */
+      --font-bakh: "bakh",
+    sans-serif;
+}
+@font-face {
+  font-family: bakh;
+  src: url(./assets/YekanBakh-Regular.ttf);
+}
