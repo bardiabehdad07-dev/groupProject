@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+
 @theme {
   /* colors */
 
@@ -36,6 +39,6 @@
     sans-serif;
 }
 @font-face {
-  font-family: bakh;
-  src: url(./assets/YekanBakh-Regular.ttf);
+  font-family: "bakh";
+  src: url(../assets/YekanBakh-Regular.ttf);
 }
