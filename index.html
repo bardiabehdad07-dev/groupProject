@@ -16,14 +16,16 @@
       <section id="welcome">
         <!-- bardia -->
       </section>
-      <section id="today-tasks">
+      <section id="today-tasks" class="dark:bg-[#060C18]">
         <div class="w-full flex justify-center font-bakh bg-ne">
           <div class="mt-6 w-full max-w-186 text-right" dir="rtl">
             <!-- first -->
             <!-- empty page with add button -->
 
             <div class="px-4 mb-5" id="todayTask">
-              <h1 class="font-bold text-xl text-[#222222]">تسک های امروز</h1>
+              <h1 class="font-bold text-xl text-[#222222] dark:text-white">
+                تسک های امروز
+              </h1>
               <small id="taskCount" class="text-[#696969] text-sm"
                 >تسکی برای امروز نداری!</small
               >
@@ -32,7 +34,7 @@
             <div class="w-full mt-4 px-4">
               <button
                 id="openCreateTaskBtn"
-                class="w-full border border-dashed border-[#CCCCCC] rounded-[10px] flex items-center justify-start py-3 pr-4 text-[#007BFF] hover:bg-neutral-9 transition cursor-pointer bg-transparent"
+                class="w-full border border-dashed border-[#203E62] dark:bg-[#091120] rounded-[10px] flex items-center justify-start py-3 pr-4 text-[#007BFF] hover:bg-neutral-9 transition cursor-pointer bg-transparent"
               >
                 <span class="text-xl font-bold font-sans select-none ml-2"
                   >+</span
@@ -53,8 +55,10 @@
                 />
               </div>
 
-              <h2 class="text-base md:text-lg font-bold text-[#222222] mb-2">
-                چه کار هایی امروز برای انجام داری?
+              <h2
+                class="text-base md:text-lg font-bold text-[#222222] mb-2 dark:text-[#696969]"
+              >
+                چه کار هایی امروز برای انجام داری؟
               </h2>
 
               <small
@@ -69,14 +73,14 @@
 
             <div id="create-task-card" class="w-full mt-4 px-4">
               <div
-                class="w-full bg-white border border-[#EBEBEB] rounded-[20px] flex flex-col overflow-hidden"
+                class="w-full bg-white dark:bg-[#060C18] border border-[#EBEBEB] dark:border-[#3D3D3D] rounded-[20px] flex flex-col overflow-hidden"
               >
                 <div class="p-5 flex flex-col gap-3 relative">
                   <input
                     type="text"
                     id="taskTitleInput"
                     placeholder="نام تسک"
-                    class="w-full text-base font-bold placeholder:text-neutral-4 focus:outline-none bg-transparent"
+                    class="w-full text-base font-bold placeholder:text-neutral-4 dark:placeholder:text-white focus:outline-none bg-transparent"
                   />
 
                   <textarea
@@ -115,12 +119,12 @@
                     </label>
 
                     <div
-                      class="bg-white border border-[#EBEBEB] rounded-[14px] shadow-[0_4px_12px_rgba(0,0,0,0.05)] items-center p-2 z-10 peer-checked:flex transition-all hidden"
+                      class="bg-white border border-[#EBEBEB] dark:border-[#293242] dark:bg-[#0B192D] rounded-[14px] shadow-[0_4px_12px_rgba(0,0,0,0.05)] items-center p-2 z-10 peer-checked:flex transition-all hidden"
                     >
                       <button
                         id="priorityLowBtn"
                         data-priority="low"
-                        class="priority-option-btn px-3 py-1 text-xs font-bold bg-[#C3FFF1] text-[#11A483] rounded-lg hover:bg-[#34C759]/20 transition cursor-pointer"
+                        class="priority-option-btn px-3 py-1 text-xs font-bold bg-[#C3FFF1] dark:bg-[#302F2D] text-[#11A483] rounded-lg hover:bg-[#34C759]/20 transition cursor-pointer"
                       >
                         پایین
                       </button>
@@ -130,7 +134,7 @@
                       <button
                         id="priorityMediumBtn"
                         data-priority="medium"
-                        class="priority-option-btn px-3 py-1 text-xs font-semibold text-[#FFAF37] bg-[#FFEFD6] rounded-lg hover:bg-[#FFCC00]/20 transition cursor-pointer"
+                        class="priority-option-btn px-3 py-1 text-xs font-semibold text-[#FFAF37] bg-[#FFEFD6] dark:bg-[#302F2D] rounded-lg hover:bg-[#FFCC00]/20 transition cursor-pointer"
                       >
                         متوسط
                       </button>
@@ -140,7 +144,7 @@
                       <button
                         id="priorityHighBtn"
                         data-priority="high"
-                        class="priority-option-btn px-3 py-1 text-xs font-bold text-[#FF5F37] bg-[#FFE2DB] rounded-lg hover:bg-[#FF3B30]/20 transition cursor-pointer"
+                        class="priority-option-btn px-3 py-1 text-xs font-bold text-[#FF5F37] bg-[#FFE2DB] dark:bg-[#3D2327] rounded-lg hover:bg-[#FF3B30]/20 transition cursor-pointer"
                       >
                         بالا
                       </button>
@@ -148,7 +152,7 @@
                   </div>
                 </div>
 
-                <div class="w-full h-px bg-[#EBEBEB]"></div>
+                <div class="w-full h-px bg-[#EBEBEB] dark:bg-[#3D3D3D]"></div>
 
                 <div
                   class="p-4 flex items-center justify-end gap-3 bg-transparent"
@@ -156,7 +160,7 @@
                   <button
                     id="cancelTaskBtn"
                     type="button"
-                    class="p-2.5 bg-[#F5F5F5] hover:bg-[#EBEBEB] rounded-xl transition cursor-pointer flex items-center justify-center"
+                    class="p-2.5 bg-[#F5F5F5] dark:bg-[#0C1B31] hover:bg-[#EBEBEB] rounded-xl transition cursor-pointer flex items-center justify-center"
                   >
                     <img
                       src="./src/img/xmark.svg"
@@ -168,7 +172,7 @@
                   <button
                     id="submitTaskBtn"
                     type="button"
-                    class="px-6 py-2.5 text-sm font-bold text-white bg-[#007BFF] rounded-xl transition cursor-pointer"
+                    class="px-6 py-2.5 text-sm font-bold text-white dark:text-gray-500 bg-[#007BFF] dark:bg-[#0C1B31] rounded-xl transition cursor-pointer"
                   >
                     اضافه کردن تسک
                   </button>
@@ -183,7 +187,7 @@
               <div id="taskList" class="w-full mt-4 px-4 flex flex-col gap-4">
                 <!-- task card: priority بالا -->
                 <div
-                  class="task-card w-full bg-white border border-[#EBEBEB] rounded-[20px] p-4 relative"
+                  class="task-card w-full bg-white dark:bg-[#091120] border border-[#EBEBEB] dark:border-[#091120] rounded-[20px] p-4 relative"
                   data-priority="high"
                 >
                   <span
@@ -197,8 +201,14 @@
                   >
                     <img
                       src="./src/img/dotdot.svg"
-                      alt=""
-                      class="w-4 h-4 object-contain"
+                      alt="dot menu"
+                      class="w-4 h-4 object-contain dark:hidden"
+                    />
+
+                    <img
+                      src="./src/img/dotdot_dark.svg"
+                      alt="dot menu"
+                      class="w-4 h-4 object-contain dark:block"
                     />
                   </button>
 
@@ -225,11 +235,13 @@
                   </label>
 
                   <div class="pr-7 pl-7">
-                    <h3 class="text-base font-bold text-[#222222]">
+                    <h3
+                      class="text-base font-bold text-[#222222] dark:text-white"
+                    >
                       جلسه با مدیران پروژه
                     </h3>
                     <span
-                      class="mt-1 inline-block rounded-lg text-xs font-bold px-3 py-1 bg-[#FFE2DB] text-[#FF5F37]"
+                      class="mt-1 inline-block rounded-lg text-xs font-bold px-3 py-1 bg-[#FFE2DB] dark:bg-[#3D2327] text-[#FF5F37]"
                       >بالا</span
                     >
                     <p class="mt-6 text-sm font-medium text-neutral-4">
@@ -240,7 +252,7 @@
 
                 <!-- task card: priority متوسط -->
                 <div
-                  class="task-card w-full bg-white border border-[#EBEBEB] rounded-[20px] p-4 relative"
+                  class="task-card w-full bg-white border dark:bg-[#091120] border-[#EBEBEB] dark:border-[#091120] rounded-[20px] p-4 relative"
                   data-priority="medium"
                 >
                   <span
@@ -255,7 +267,13 @@
                     <img
                       src="./src/img/dotdot.svg"
                       alt="dot menu"
-                      class="w-4 h-4 object-contain"
+                      class="w-4 h-4 object-contain dark:hidden"
+                    />
+
+                    <img
+                      src="./src/img/dotdot_dark.svg"
+                      alt="dot menu"
+                      class="w-4 h-4 object-contain dark:block"
                     />
                   </button>
 
@@ -282,11 +300,13 @@
                   </label>
 
                   <div class="pr-7 pl-7">
-                    <h3 class="text-base font-bold text-[#222222]">
+                    <h3
+                      class="text-base font-bold text-[#222222] dark:text-white"
+                    >
                       خرید میوه و سبزیجات و لبنیات برای خانه
                     </h3>
                     <span
-                      class="mt-1 inline-block rounded-lg text-xs font-semibold px-3 py-1 bg-[#FFEFD6] text-[#FFAF37]"
+                      class="mt-1 inline-block rounded-lg text-xs font-semibold px-3 py-1 bg-[#FFEFD6] dark:bg-[#302F2D] text-[#FFAF37]"
                       >متوسط</span
                     >
                     <p class="mt-6 text-sm font-medium text-neutral-4">
@@ -297,7 +317,7 @@
 
                 <!-- task card: priority پایین -->
                 <div
-                  class="task-card w-full bg-white border border-[#EBEBEB] rounded-[20px] p-4 relative"
+                  class="task-card w-full bg-white dark:bg-[#091120] border border-[#EBEBEB] dark:border-[#091120] rounded-[20px] p-4 relative"
                   data-priority="low"
                 >
                   <span
@@ -312,7 +332,13 @@
                     <img
                       src="./src/img/dotdot.svg"
                       alt="dot menu"
-                      class="w-4 h-4 object-contain"
+                      class="w-4 h-4 object-contain dark:hidden"
+                    />
+
+                    <img
+                      src="./src/img/dotdot_dark.svg"
+                      alt="dot menu"
+                      class="w-4 h-4 object-contain dark:block"
                     />
                   </button>
 
@@ -339,11 +365,13 @@
                   </label>
 
                   <div class="pr-7 pl-7">
-                    <h3 class="text-base font-bold text-[#222222]">
+                    <h3
+                      class="text-base font-bold text-[#222222] dark:text-white"
+                    >
                       تماس با جمشید
                     </h3>
                     <span
-                      class="mt-1 inline-block rounded-lg text-xs font-bold px-3 py-1 bg-[#C3FFF1] text-[#11A483]"
+                      class="mt-1 inline-block rounded-lg text-xs font-bold px-3 py-1 bg-[#C3FFF1] dark:bg-[#233332] text-[#11A483]"
                       >پایین</span
                     >
                     <p class="mt-6 text-sm font-medium text-neutral-4">

@@ -7,6 +7,8 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-gray-500: oklch(55.1% 0.027 264.364);
+    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-sm: 24rem;
@@ -211,9 +213,6 @@
   .right-4 {
     right: calc(var(--spacing) * 4);
   }
-  .left-0 {
-    left: 0;
-  }
   .left-4 {
     left: calc(var(--spacing) * 4);
   }
@@ -294,9 +293,6 @@
   }
   .w-56 {
     width: calc(var(--spacing) * 56);
-  }
-  .w-\[1px\] {
-    width: 1px;
   }
   .w-\[19px\] {
     width: 19px;
@@ -393,6 +389,12 @@
     --tw-border-style: dashed;
     border-style: dashed;
   }
+  .border-\[\#203E62\] {
+    border-color: #203E62;
+  }
+  .border-\[\#091120\] {
+    border-color: #091120;
+  }
   .border-\[\#CCCCCC\] {
     border-color: #CCCCCC;
   }
@@ -402,20 +404,11 @@
   .border-\[\#EBEBEB\] {
     border-color: #EBEBEB;
   }
-  .bg-\[\#\#C3FFF1\] {
-    background-color: ##C3FFF1;
-  }
   .bg-\[\#007BFF\] {
     background-color: #007BFF;
   }
   .bg-\[\#11A483\] {
     background-color: #11A483;
-  }
-  .bg-\[\#34C759\] {
-    background-color: #34C759;
-  }
-  .bg-\[\#34C759\]\/10 {
-    background-color: color-mix(in oklab, #34C759 10%, transparent);
   }
   .bg-\[\#C3FFF1\] {
     background-color: #C3FFF1;
@@ -426,26 +419,17 @@
   .bg-\[\#F5F5F5\] {
     background-color: #F5F5F5;
   }
-  .bg-\[\#FF3B30\]\/10 {
-    background-color: color-mix(in oklab, #FF3B30 10%, transparent);
-  }
   .bg-\[\#FF5F37\] {
     background-color: #FF5F37;
   }
   .bg-\[\#FFAF37\] {
     background-color: #FFAF37;
   }
-  .bg-\[\#FFCC00\]\/10 {
-    background-color: color-mix(in oklab, #FFCC00 10%, transparent);
-  }
   .bg-\[\#FFE2DB\] {
     background-color: #FFE2DB;
   }
   .bg-\[\#FFEFD6\] {
     background-color: #FFEFD6;
-  }
-  .bg-\[\#\] {
-    background-color: #;
   }
   .bg-transparent {
     background-color: transparent;
@@ -554,9 +538,6 @@
   .text-\[\#11A483\] {
     color: #11A483;
   }
-  .text-\[\#34C759\] {
-    color: #34C759;
-  }
   .text-\[\#222222\] {
     color: #222222;
   }
@@ -566,17 +547,11 @@
   .text-\[\#696969\] {
     color: #696969;
   }
-  .text-\[\#FF3B30\] {
-    color: #FF3B30;
-  }
   .text-\[\#FF5F37\] {
     color: #FF5F37;
   }
   .text-\[\#FFAF37\] {
     color: #FFAF37;
-  }
-  .text-\[\#FFCC00\] {
-    color: #FFCC00;
   }
   .text-neutral-3 {
     color: var(--color-neutral-3);
@@ -717,6 +692,119 @@
     @media (width >= 48rem) {
       font-size: var(--text-sm);
       line-height: var(--tw-leading, var(--text-sm--line-height));
+    }
+  }
+  .dark\:block {
+    @media (prefers-color-scheme: dark) {
+      display: block;
+    }
+  }
+  .dark\:hidden {
+    @media (prefers-color-scheme: dark) {
+      display: none;
+    }
+  }
+  .dark\:rounded-lg {
+    @media (prefers-color-scheme: dark) {
+      border-radius: var(--radius-lg);
+    }
+  }
+  .dark\:border {
+    @media (prefers-color-scheme: dark) {
+      border-style: var(--tw-border-style);
+      border-width: 1px;
+    }
+  }
+  .dark\:border-\[\#3D3D3D\] {
+    @media (prefers-color-scheme: dark) {
+      border-color: #3D3D3D;
+    }
+  }
+  .dark\:border-\[\#091120\] {
+    @media (prefers-color-scheme: dark) {
+      border-color: #091120;
+    }
+  }
+  .dark\:border-\[\#293242\] {
+    @media (prefers-color-scheme: dark) {
+      border-color: #293242;
+    }
+  }
+  .dark\:bg-\[\#0B192D\] {
+    @media (prefers-color-scheme: dark) {
+      background-color: #0B192D;
+    }
+  }
+  .dark\:bg-\[\#0C1B31\] {
+    @media (prefers-color-scheme: dark) {
+      background-color: #0C1B31;
+    }
+  }
+  .dark\:bg-\[\#3D3D3D\] {
+    @media (prefers-color-scheme: dark) {
+      background-color: #3D3D3D;
+    }
+  }
+  .dark\:bg-\[\#3D2327\] {
+    @media (prefers-color-scheme: dark) {
+      background-color: #3D2327;
+    }
+  }
+  .dark\:bg-\[\#060C18\] {
+    @media (prefers-color-scheme: dark) {
+      background-color: #060C18;
+    }
+  }
+  .dark\:bg-\[\#203E62\] {
+    @media (prefers-color-scheme: dark) {
+      background-color: #203E62;
+    }
+  }
+  .dark\:bg-\[\#302F2D\] {
+    @media (prefers-color-scheme: dark) {
+      background-color: #302F2D;
+    }
+  }
+  .dark\:bg-\[\#091120\] {
+    @media (prefers-color-scheme: dark) {
+      background-color: #091120;
+    }
+  }
+  .dark\:bg-\[\#233332\] {
+    @media (prefers-color-scheme: dark) {
+      background-color: #233332;
+    }
+  }
+  .dark\:bg-black {
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-black);
+    }
+  }
+  .dark\:text-\[\#3D3D3D\] {
+    @media (prefers-color-scheme: dark) {
+      color: #3D3D3D;
+    }
+  }
+  .dark\:text-\[\#696969\] {
+    @media (prefers-color-scheme: dark) {
+      color: #696969;
+    }
+  }
+  .dark\:text-gray-500 {
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-gray-500);
+    }
+  }
+  .dark\:text-white {
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-white);
+    }
+  }
+  .dark\:placeholder\:text-white {
+    @media (prefers-color-scheme: dark) {
+      &::placeholder {
+        color: var(--color-white);
+      }
     }
   }
 }
