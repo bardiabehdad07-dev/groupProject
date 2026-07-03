@@ -17,7 +17,344 @@
         <!-- bardia -->
       </section>
       <section id="today-tasks">
-        <!-- amin -->
+        <div class="w-full flex justify-center font-bakh bg-ne">
+          <div class="mt-6 w-full max-w-186 text-right" dir="rtl">
+            <!-- first -->
+            <!-- empty page with add button -->
+
+            <div class="px-4 mb-5" id="todayTask">
+              <h1 class="font-bold text-xl text-[#222222]">تسک های امروز</h1>
+              <small id="taskCount" class="text-[#696969] text-sm"
+                >تسکی برای امروز نداری!</small
+              >
+            </div>
+
+            <div class="w-full mt-4 px-4">
+              <button
+                id="openCreateTaskBtn"
+                class="w-full border border-dashed border-[#CCCCCC] rounded-[10px] flex items-center justify-start py-3 pr-4 text-[#007BFF] hover:bg-neutral-9 transition cursor-pointer bg-transparent"
+              >
+                <span class="text-xl font-bold font-sans select-none ml-2"
+                  >+</span
+                >
+                <span class="text-base font-medium">افزودن وظیفه جدید</span>
+              </button>
+            </div>
+
+            <div
+              id="emptyState"
+              class="w-full mt-12 flex flex-col items-center justify-center text-center px-4"
+            >
+              <div class="w-56 md:w-64 h-auto mb-6">
+                <img
+                  src="./src/img/back_back.svg"
+                  alt="وضعیت خالی تسک‌ها"
+                  class="w-full h-full object-contain opacity-50"
+                />
+              </div>
+
+              <h2 class="text-base md:text-lg font-bold text-[#222222] mb-2">
+                چه کار هایی امروز برای انجام داری?
+              </h2>
+
+              <small
+                class="text-xs md:text-sm text-[#666666] leading-relaxed max-w-sm block"
+              >
+                میتونی الان تسک‌هاتو اینجا بنویسی و برنامه ریزی رو شروع کنی!
+              </small>
+            </div>
+
+            <!-- second
+            empty task card and tags  -->
+
+            <div id="create-task-card" class="w-full mt-4 px-4">
+              <div
+                class="w-full bg-white border border-[#EBEBEB] rounded-[20px] flex flex-col overflow-hidden"
+              >
+                <div class="p-5 flex flex-col gap-3 relative">
+                  <input
+                    type="text"
+                    id="taskTitleInput"
+                    placeholder="نام تسک"
+                    class="w-full text-base font-bold placeholder:text-neutral-4 focus:outline-none bg-transparent"
+                  />
+
+                  <textarea
+                    id="taskDescInput"
+                    placeholder="توضیحات"
+                    rows="2"
+                    class="w-full text-sm font-medium text-neutral-3 placeholder:text-neutral-5 focus:outline-none bg-transparent resize-none"
+                  ></textarea>
+
+                  <div
+                    class="flex flex-col items-start mt-2 gap-3 relative w-full"
+                  >
+                    <input
+                      type="checkbox"
+                      id="tag-toggle"
+                      class="peer hidden"
+                    />
+
+                    <label
+                      for="tag-toggle"
+                      class="flex items-center gap-1.5 border border-[#E5E5E5] rounded-lg px-3 py-1.5 text-xs font-medium text-[#696969] hover:bg-neutral-9 transition cursor-pointer bg-transparent select-none"
+                    >
+                      <img
+                        src="./src/img/tag-right.svg"
+                        alt="Tag Icon"
+                        class="w-4 h-4 object-contain peer-checked:hidden"
+                      />
+
+                      <img
+                        src="./src/img/down_tag.svg"
+                        alt="Tag Icon Active"
+                        class="w-4 h-4 object-contain hidden peer-checked:block"
+                      />
+
+                      <span class="text-neutral-5">تگ‌ها</span>
+                    </label>
+
+                    <div
+                      class="bg-white border border-[#EBEBEB] rounded-[14px] shadow-[0_4px_12px_rgba(0,0,0,0.05)] items-center p-2 z-10 peer-checked:flex transition-all hidden"
+                    >
+                      <button
+                        id="priorityLowBtn"
+                        data-priority="low"
+                        class="priority-option-btn px-3 py-1 text-xs font-bold bg-[#C3FFF1] text-[#11A483] rounded-lg hover:bg-[#34C759]/20 transition cursor-pointer"
+                      >
+                        پایین
+                      </button>
+
+                      <div class="w-px h-4 bg-[#EBEBEB] mx-2"></div>
+
+                      <button
+                        id="priorityMediumBtn"
+                        data-priority="medium"
+                        class="priority-option-btn px-3 py-1 text-xs font-semibold text-[#FFAF37] bg-[#FFEFD6] rounded-lg hover:bg-[#FFCC00]/20 transition cursor-pointer"
+                      >
+                        متوسط
+                      </button>
+
+                      <div class="w-px h-4 bg-[#EBEBEB] mx-2"></div>
+
+                      <button
+                        id="priorityHighBtn"
+                        data-priority="high"
+                        class="priority-option-btn px-3 py-1 text-xs font-bold text-[#FF5F37] bg-[#FFE2DB] rounded-lg hover:bg-[#FF3B30]/20 transition cursor-pointer"
+                      >
+                        بالا
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="w-full h-px bg-[#EBEBEB]"></div>
+
+                <div
+                  class="p-4 flex items-center justify-end gap-3 bg-transparent"
+                >
+                  <button
+                    id="cancelTaskBtn"
+                    type="button"
+                    class="p-2.5 bg-[#F5F5F5] hover:bg-[#EBEBEB] rounded-xl transition cursor-pointer flex items-center justify-center"
+                  >
+                    <img
+                      src="./src/img/xmark.svg"
+                      alt="Close Icon"
+                      class="w-5 h-5 object-contain"
+                    />
+                  </button>
+
+                  <button
+                    id="submitTaskBtn"
+                    type="button"
+                    class="px-6 py-2.5 text-sm font-bold text-white bg-[#007BFF] rounded-xl transition cursor-pointer"
+                  >
+                    اضافه کردن تسک
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- third part
+            tasks list -->
+
+            <div>
+              <div id="taskList" class="w-full mt-4 px-4 flex flex-col gap-4">
+                <!-- task card: priority بالا -->
+                <div
+                  class="task-card w-full bg-white border border-[#EBEBEB] rounded-[20px] p-4 relative"
+                  data-priority="high"
+                >
+                  <span
+                    class="pointer-events-none absolute inset-y-4 right-0 w-1 rounded-full bg-[#FF5F37]"
+                  ></span>
+
+                  <button
+                    type="button"
+                    class="absolute top-4 left-4"
+                    aria-label="گزینه‌های تسک"
+                  >
+                    <img
+                      src="./src/img/dotdot.svg"
+                      alt=""
+                      class="w-4 h-4 object-contain"
+                    />
+                  </button>
+
+                  <label
+                    class="absolute top-4 right-4 h-[19px] w-[19px] cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      class="task-checkbox peer appearance-none h-[19px] w-[19px] rounded border border-[#CCCCCC] checked:bg-[#007BFF] checked:border-[#007BFF] transition cursor-pointer"
+                    />
+                    <svg
+                      class="pointer-events-none absolute inset-0 h-full w-full p-[3px] text-white opacity-0 peer-checked:opacity-100"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                    >
+                      <path
+                        d="M2 6.2L4.6 8.8L10 3.2"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </label>
+
+                  <div class="pr-7 pl-7">
+                    <h3 class="text-base font-bold text-[#222222]">
+                      جلسه با مدیران پروژه
+                    </h3>
+                    <span
+                      class="mt-1 inline-block rounded-lg text-xs font-bold px-3 py-1 bg-[#FFE2DB] text-[#FF5F37]"
+                      >بالا</span
+                    >
+                    <p class="mt-6 text-sm font-medium text-neutral-4">
+                      جلسه با محسن یگانه و مریم جلالی
+                    </p>
+                  </div>
+                </div>
+
+                <!-- task card: priority متوسط -->
+                <div
+                  class="task-card w-full bg-white border border-[#EBEBEB] rounded-[20px] p-4 relative"
+                  data-priority="medium"
+                >
+                  <span
+                    class="pointer-events-none absolute inset-y-4 right-0 w-1 rounded-full bg-[#FFAF37]"
+                  ></span>
+
+                  <button
+                    type="button"
+                    class="absolute top-4 left-4"
+                    aria-label="گزینه‌های تسک"
+                  >
+                    <img
+                      src="./src/img/dotdot.svg"
+                      alt="dot menu"
+                      class="w-4 h-4 object-contain"
+                    />
+                  </button>
+
+                  <label
+                    class="absolute top-4 right-4 h-[19px] w-[19px] cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      class="task-checkbox peer appearance-none h-[19px] w-[19px] rounded border border-[#CCCCCC] checked:bg-[#007BFF] checked:border-[#007BFF] transition cursor-pointer"
+                    />
+                    <svg
+                      class="pointer-events-none absolute inset-0 h-full w-full p-[3px] text-white opacity-0 peer-checked:opacity-100"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                    >
+                      <path
+                        d="M2 6.2L4.6 8.8L10 3.2"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </label>
+
+                  <div class="pr-7 pl-7">
+                    <h3 class="text-base font-bold text-[#222222]">
+                      خرید میوه و سبزیجات و لبنیات برای خانه
+                    </h3>
+                    <span
+                      class="mt-1 inline-block rounded-lg text-xs font-semibold px-3 py-1 bg-[#FFEFD6] text-[#FFAF37]"
+                      >متوسط</span
+                    >
+                    <p class="mt-6 text-sm font-medium text-neutral-4">
+                      سوپرمارکت یاران دریایی
+                    </p>
+                  </div>
+                </div>
+
+                <!-- task card: priority پایین -->
+                <div
+                  class="task-card w-full bg-white border border-[#EBEBEB] rounded-[20px] p-4 relative"
+                  data-priority="low"
+                >
+                  <span
+                    class="pointer-events-none absolute inset-y-4 right-0 w-1 rounded-full bg-[#11A483]"
+                  ></span>
+
+                  <button
+                    type="button"
+                    class="absolute top-4 left-4"
+                    aria-label="گزینه‌های تسک"
+                  >
+                    <img
+                      src="./src/img/dotdot.svg"
+                      alt="dot menu"
+                      class="w-4 h-4 object-contain"
+                    />
+                  </button>
+
+                  <label
+                    class="absolute top-4 right-4 h-[19px] w-[19px] cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      class="task-checkbox peer appearance-none h-[19px] w-[19px] rounded border border-[#CCCCCC] checked:bg-[#007BFF] checked:border-[#007BFF] transition cursor-pointer"
+                    />
+                    <svg
+                      class="pointer-events-none absolute inset-0 h-full w-full p-[3px] text-white opacity-0 peer-checked:opacity-100"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                    >
+                      <path
+                        d="M2 6.2L4.6 8.8L10 3.2"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </label>
+
+                  <div class="pr-7 pl-7">
+                    <h3 class="text-base font-bold text-[#222222]">
+                      تماس با جمشید
+                    </h3>
+                    <span
+                      class="mt-1 inline-block rounded-lg text-xs font-bold px-3 py-1 bg-[#C3FFF1] text-[#11A483]"
+                      >پایین</span
+                    >
+                    <p class="mt-6 text-sm font-medium text-neutral-4">
+                      باید در مورد کارهای باقیمانده از پروژه قبلی صحبت کنیم.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <section id="done-tasks">
         <!-- anahita -->
