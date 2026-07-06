@@ -43,7 +43,9 @@
         </div>
       </nav>
       <!-- پروفایل کاربر -->
-      <div class="flex items-center gap-3 w-[66%] h-[56px] absolute top-[88px] right-[16px]  mx-auto md:hidden">
+      <div
+        class="flex items-center gap-3 w-[66%] h-[56px] absolute top-[88px] right-[16px] mx-auto md:hidden"
+      >
         <div class="w-[56px] h-[56px]">
           <img src="./assets/Ellipse 136.svg" alt="roya" />
         </div>
@@ -92,7 +94,9 @@
       </div>
 
       <!-- پروفایل کاربر -->
-      <div class="hidden flex items-center gap-3 w-[202px] h-[56px] mx-auto md:block md:flex  md:top-[64px] md:left-[46px] md:absolute">
+      <div
+        class="hidden flex items-center gap-3 w-[202px] h-[56px] mx-auto md:block md:flex md:top-[64px] md:left-[46px] md:absolute"
+      >
         <div class="w-[56px] h-[56px]">
           <img src="./assets/Ellipse 136.svg" alt="roya" />
         </div>
@@ -109,11 +113,13 @@
       </div>
 
       <!-- منوی اصلی -->
-      <div class="flex flex-col gap-4 px-4 absolute top-[96px] md:top-[192px] md:absolute">
+      <div
+        class="flex flex-col gap-4 px-4 absolute top-[96px] md:top-[192px] md:absolute"
+      >
         <div
           class="w-full h-[44px] pr-[20px] py-[12px] rounded-lg hover:bg-gray-100 dark:hover:bg-[#0C1B31] transition-colors cursor-pointer"
         >
-          <div class="flex items-center gap-4 ">
+          <div class="flex items-center gap-4">
             <svg
               width="20"
               height="20"
@@ -394,7 +400,9 @@
       </div>
 
       <!-- تم و خروج -->
-      <div class="absolute bottom-6 left-0 right-0 px-4 flex flex-col gap-[24px]">
+      <div
+        class="absolute bottom-6 left-0 right-0 px-4 flex flex-col gap-[24px]"
+      >
         <div
           class="w-full bg-[#F7F7F7] dark:bg-[#0C1B31] rounded-lg p-1 flex items-center justify-between"
         >
@@ -501,10 +509,12 @@
     </div>
 
     <!-- محتوای اصلی -->
-    <main class="md:mr-[272px] transition-all duration-300 mt-[204px] md:mt-[84px]">
-      <div class="max-w-[900px] mx-auto px-4 md:px-8 ">
+    <main
+      class="md:mr-[272px] transition-all duration-300 mt-[204px] md:mt-[84px]"
+    >
+      <div class="max-w-[900px] mx-auto px-4 md:px-8">
         <!-- بخش پروفایل کاربر فقط برای موبایل -->
-         
+
         <!-- بخش تسک‌های امروز -->
         <section id="today-tasks" class="mb-10">
           <!-- عنوان -->
@@ -580,20 +590,25 @@
                 >
                   <input type="checkbox" id="tag-toggle" class="peer hidden" />
                   <label
+                    id="tagLabelButton"
                     for="tag-toggle"
                     class="flex items-center gap-1.5 border border-[#E5E5E5] dark:border-[#3D3D3D] rounded-lg px-3 py-1.5 text-xs font-medium text-[#696969] hover:bg-gray-50 dark:hover:bg-[#0C1B31] transition cursor-pointer bg-transparent select-none"
                   >
                     <img
+                      id="tagButtonIcon"
                       src="./src/img/tag-right.svg"
                       alt="Tag Icon"
-                      class="w-4 h-4 object-contain peer-checked:hidden"
+                      class="w-4 h-4 object-contain"
                     />
                     <img
+                      id="tagButtonIconActive"
                       src="./src/img/down_tag.svg"
                       alt="Tag Icon Active"
-                      class="w-4 h-4 object-contain hidden peer-checked:block"
+                      class="w-4 h-4 object-contain hidden"
                     />
-                    <span class="text-neutral-5 dark:text-[#848890]"
+                    <span
+                      id="tagButtonText"
+                      class="text-neutral-5 dark:text-[#848890]"
                       >تگ‌ها</span
                     >
                   </label>
@@ -603,7 +618,7 @@
                     <button
                       id="priorityLowBtn"
                       data-priority="low"
-                      class="priority-option px-3 py-1 text-xs font-bold bg-[#C3FFF1] dark:bg-[#302F2D] text-[#11A483] rounded-lg hover:bg-[#34C759]/20 transition cursor-pointer"
+                      class="priority-option px-3 py-1 text-xs font-bold bg-[#C3FFF1] dark:bg-[#233332] text-[#11A483] rounded-lg hover:bg-[#34C759]/20 transition cursor-pointer"
                     >
                       پایین
                     </button>
@@ -882,7 +897,7 @@
               </label>
               <div class="pr-7">
                 <h3
-                  class="text-base font-bold text-[#222222] dark:text-white line-through "
+                  class="text-base font-bold text-[#222222] dark:text-white line-through"
                 >
                   خرید میوه و سبزیجات و لبنیات برای خانه
                 </h3>
@@ -920,7 +935,7 @@
               </label>
               <div class="pr-7">
                 <h3
-                  class="text-base font-bold text-[#222222] dark:text-white line-through "
+                  class="text-base font-bold text-[#222222] dark:text-white line-through"
                 >
                   تماس با مبل‌فروشی در مورد تأخیر در ارسال
                 </h3>
@@ -958,7 +973,7 @@
               </label>
               <div class="pr-7">
                 <h3
-                  class="text-base font-bold text-[#222222] dark:text-white line-through "
+                  class="text-base font-bold text-[#222222] dark:text-white line-through"
                 >
                   جلسه با مرتضی در مورد مصاحبه با کارآموز ادمین پنل
                 </h3>
@@ -972,4 +987,3 @@
   </body>
 </html>
 <!-- good luck -->
-
