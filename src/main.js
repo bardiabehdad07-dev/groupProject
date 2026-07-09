@@ -1,3 +1,54 @@
+const menuToggle = document.getElementById("menuToggle");
+const closeSidebar = document.getElementById("closeSidebar");
+const sidebar = document.getElementById("sidebar");
+const overlay = document.getElementById("overlay");
+
+// باز کردن منو
+menuToggle.addEventListener("click", () => {
+  sidebar.classList.remove("hidden");
+  overlay.style.visibility = "visible";
+});
+
+// بستن منو با ضربدر
+closeSidebar.addEventListener("click", closeMenu);
+
+// بستن منو با کلیک روی اورلی
+overlay.addEventListener("click", closeMenu);
+
+function closeMenu() {
+  sidebar.classList.add("hidden");
+  overlay.style.visibility = "hidden";
+}
+    
+
+
+// حالت روشن
+lightMode?.addEventListener("click", () => {
+  document.body.classList.remove("dark");
+});
+
+// حالت تاریک
+darkMode?.addEventListener("click", () => {
+  document.body.classList.add("dark");
+});
+
+// سیو شدن برای ریلود
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark");
+}
+
+lightMode?.addEventListener("click", () => {
+  document.body.classList.remove("dark");
+  localStorage.setItem("theme", "light");
+});
+
+darkMode?.addEventListener("click", () => {
+  document.body.classList.add("dark");
+  localStorage.setItem("theme", "dark");
+});
+
+
+
 // AMIN
 
 /* ==========================================================================
@@ -385,6 +436,7 @@ submitTaskBtn.addEventListener("click", () => {
       title: title,
       desc: desc,
       priority: priority,
+      completed: false,
     };
     tasks.push(newTask);
   }
@@ -485,3 +537,8 @@ document.addEventListener("click", () => {
 // Initial execution to fire up the renderer when script loading concludes
 // اولین رندر صفحه در هنگام لود کامل و اتمام بارگذاری اسکریپت
 renderTasks();
+
+// bardia
+// اضافه شدن تسک ها به تسک های انجام شده در صورت کلیک روی چک باکس
+
+const doneTaskList = document.getElementById("doneTaskList");
