@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>کوئرا لیست</title>
     <link rel="stylesheet" href="./src/output.css" />
-    <link rel="icon" href="./favicon.ico">
-    <link rel="icon" href="./favicon-32x32.png">
-    <link rel="icon" href="./favicon-32x32.png">
-    <link rel="apple-touch-icon" href="./apple-touch-icon.png">
-    <link rel="manifest" href="./site.webmanifest">
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="icon" href="./favicon-32x32.png" />
+    <link rel="icon" href="./favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./site.webmanifest" />
   </head>
   <body class="font-bakh dark:bg-[#060C18]" dir="rtl">
     <div
@@ -133,7 +133,7 @@
         class="w-full flex flex-col gap-4 px-4 absolute top-[19.5%] md:top-[19.5%] md:absolute h-[41%]"
       >
         <div
-          class="w-full h-[10%] pr-[20px] py-[12px] rounded-lg hover:bg-gray-100 bg-[#F5FAFF] dark:bg-[#041933] dark:hover:bg-[#0C1B31] transition-colors cursor-pointer flex items-center "
+          class="w-full h-[10%] pr-[20px] py-[12px] rounded-lg hover:bg-gray-100 bg-[#F5FAFF] dark:bg-[#041933] dark:hover:bg-[#0C1B31] transition-colors cursor-pointer flex items-center"
         >
           <div class="flex items-center gap-4 h-[45%]">
             <svg
@@ -149,7 +149,7 @@
               />
             </svg>
             <span
-              class=" h-[20px] text-[16px] font-semibold text-[#007BFF] dark:text-neutral-11"
+              class="h-[20px] text-[16px] font-semibold text-[#007BFF] dark:text-neutral-11"
               >خانه</span
             >
           </div>
@@ -537,12 +537,12 @@
         <section id="today-tasks" class="mb-10">
           <!-- عنوان -->
           <div class="px-4 mb-5">
-            <h1 class="font-extrabold text-[16px] md:text-[20px] text-[#222222] dark:text-white">
+            <h1 class="font-bold text-xl text-[#222222] dark:text-white">
               تسک های امروز
             </h1>
             <small
               id="taskCount"
-              class="text-[#696969] text-[12px] md:text-[14px] dark:text-[#848890]"
+              class="text-[#696969] text-sm dark:text-[#848890]"
             >
               تسکی برای امروز نداری!
             </small>
@@ -873,17 +873,16 @@
         </section>
 
         <!-- بخش تسک‌های انجام شده -->
-        <section class="w-full max-w-[836px] mx-auto mt-10 px-4 md:px-0">
-          <div class="flex justify-between items-center w-full mb-6">
+
+        <section class="mb-10 mt-10">
+          <div class="px-4 mb-6">
             <div class="flex flex-col gap-1">
-              <h2
-                class="text-[16px] md:text-[20px] font-extrabold text-[#222222] dark:text-white leading-none"
-              >
+              <h2 class="font-bold text-xl text-[#222222] dark:text-white">
                 تسک‌های انجام شده
               </h2>
               <span
                 id="doneTaskCount"
-                class="text-[12px] md:text-[14px] font-medium text-neutral-4 dark:text-[#848890]"
+                class="text-xs md:text-sm font-medium text-neutral-4 dark:text-[#848890]"
               >
                 تسکی انجام نشده است
               </span>
@@ -892,7 +891,7 @@
 
           <div
             id="doneTaskList"
-            class="flex flex-col gap-4 w-full hidden"
+            class="w-full mt-6 px-4 flex flex-col gap-4 hidden"
           ></div>
         </section>
       </div>
