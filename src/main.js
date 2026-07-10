@@ -552,3 +552,5 @@ function saveToLocalStorage() {
 // اجرای تابع تاریخ قبل از رندر نهایی
 displayCurrentDate();
 renderAll();
+
+// goodluck
