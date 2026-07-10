@@ -504,6 +504,12 @@
   .h-\[48px\] {
     height: 48px;
   }
+  .h-\[50\%\] {
+    height: 50%;
+  }
+  .h-\[50\] {
+    height: 50;
+  }
   .h-\[55\.5\%\] {
     height: 55.5%;
   }
@@ -521,6 +527,9 @@
   }
   .h-\[96\] {
     height: 96;
+  }
+  .h-\[100\%\] {
+    height: 100%;
   }
   .h-\[1038px\] {
     height: 1038px;
@@ -672,6 +681,12 @@
   }
   .self-center {
     align-self: center;
+  }
+  .self-end {
+    align-self: flex-end;
+  }
+  .self-start {
+    align-self: flex-start;
   }
   .overflow-hidden {
     overflow: hidden;
@@ -891,6 +906,9 @@
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
   }
+  .text-\[12px\] {
+    font-size: 12px;
+  }
   .text-\[14px\] {
     font-size: 14px;
   }
@@ -899,6 +917,9 @@
   }
   .text-\[18px\] {
     font-size: 18px;
+  }
+  .text-\[20px\] {
+    font-size: 20px;
   }
   .leading-none {
     --tw-leading: 1;
@@ -959,6 +980,12 @@
   }
   .text-\[\#e9e9e9\] {
     color: #e9e9e9;
+  }
+  .text-\[20\] {
+    color: 20;
+  }
+  .text-\[xl\] {
+    color: xl;
   }
   .text-neutral-4 {
     color: var(--color-neutral-4);
@@ -1304,6 +1331,16 @@
     @media (width >= 48rem) {
       font-size: var(--text-sm);
       line-height: var(--tw-leading, var(--text-sm--line-height));
+    }
+  }
+  .md\:text-\[14px\] {
+    @media (width >= 48rem) {
+      font-size: 14px;
+    }
+  }
+  .md\:text-\[20px\] {
+    @media (width >= 48rem) {
+      font-size: 20px;
     }
   }
   .dark\:block {
