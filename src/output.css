@@ -44,6 +44,7 @@
     --default-mono-font-family: var(--font-mono);
     --color-neutral-4: #7D7D7F;
     --color-neutral-5: #AFAEB2;
+    --color-neutral-9: #F5F6F8;
     --color-neutral-11: #FFFFFF;
     --font-bakh: "bakh",
     sans-serif;
@@ -210,9 +211,6 @@
   .absolute {
     position: absolute;
   }
-  .fixed {
-    position: fixed;
-  }
   .relative {
     position: relative;
   }
@@ -224,9 +222,6 @@
   }
   .top-0 {
     top: 0;
-  }
-  .top-1 {
-    top: var(--spacing);
   }
   .top-1\/2 {
     top: calc(1 / 2 * 100%);
@@ -267,8 +262,8 @@
   .left-0 {
     left: 0;
   }
-  .left-1 {
-    left: var(--spacing);
+  .left-0 {
+    left: 0;
   }
   .left-1\/2 {
     left: calc(1 / 2 * 100%);
@@ -468,19 +463,17 @@
   .min-w-max {
     min-width: max-content;
   }
-  .border-collapse {
-    border-collapse: collapse;
+  .max-w-\[900px\] {
+    max-width: 900px;
   }
-  .-translate-x-1 {
-    --tw-translate-x: calc(var(--spacing) * -1);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
+  .max-w-sm {
+    max-width: var(--container-sm);
+  }
+  .min-w-max {
+    min-width: max-content;
   }
   .-translate-x-1\/2 {
     --tw-translate-x: calc(calc(1 / 2 * 100%) * -1);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .-translate-y-1 {
-    --tw-translate-y: calc(var(--spacing) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-y-1\/2 {
@@ -493,8 +486,11 @@
   .cursor-pointer {
     cursor: pointer;
   }
-  .resize {
-    resize: both;
+  .resize-none {
+    resize: none;
+  }
+  .appearance-none {
+    appearance: none;
   }
   .resize-none {
     resize: none;
@@ -825,8 +821,8 @@
   .line-through {
     text-decoration-line: line-through;
   }
-  .underline {
-    text-decoration-line: underline;
+  .opacity-0 {
+    opacity: 0%;
   }
   .opacity-0 {
     opacity: 0%;
@@ -1165,9 +1161,9 @@
       background-color: #233332;
     }
   }
-  .dark\:text-\[\#7A7A7A\] {
+  .dark\:text-\[\#696969\] {
     &:where(.dark, .dark *) {
-      color: #7A7A7A;
+      color: #696969;
     }
   }
   .dark\:text-\[\#696969\] {
@@ -1362,10 +1358,9 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
-@property --tw-outline-style {
+@property --tw-duration {
   syntax: "*";
   inherits: false;
-  initial-value: solid;
 }
 @property --tw-duration {
   syntax: "*";
