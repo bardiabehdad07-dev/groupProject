@@ -509,12 +509,48 @@ document.addEventListener("click", () => {
 });
 
 /* ==========================================================================
-   8. Application Initialization
-   // ۸. اجرای اولیه برنامه
+   8. Live Date Display (نمایش تاریخ زنده امروز)
+   ========================================================================== */
+function displayCurrentDate() {
+  const today = new Date();
+
+  const weekday = today.toLocaleDateString("fa-IR", {
+    calendar: "persian",
+    weekday: "long",
+  });
+  const day = today.toLocaleDateString("fa-IR", {
+    calendar: "persian",
+    day: "numeric",
+  });
+  const month = today.toLocaleDateString("fa-IR", {
+    calendar: "persian",
+    month: "long",
+  });
+  const year = today.toLocaleDateString("fa-IR", {
+    calendar: "persian",
+    year: "numeric",
+  });
+
+  const formattedDate = `امروز، ${weekday}، ${day} ${month} ${year}`;
+
+  // این خط تغییر کرد: هر المانی که مربوط به تاریخ باشد را پیدا می‌کند و تغییر می‌دهد
+  const dateElements = document.querySelectorAll("[id^='current-date']");
+  dateElements.forEach((el) => {
+    el.textContent = formattedDate;
+  });
+}
+
+/* ==========================================================================
+   9. Application Initialization
+   // ۹. اجرای اولیه برنامه
    ========================================================================== */
 
 function saveToLocalStorage() {
   localStorage.setItem("myTasks", JSON.stringify(tasks));
 }
 
+// اجرای تابع تاریخ قبل از رندر نهایی
+displayCurrentDate();
 renderAll();
+
+// goodluck
