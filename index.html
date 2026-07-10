@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>کوئرا لیست</title>
     <link rel="stylesheet" href="./src/output.css" />
+    <link rel="icon" href="./assets/favicon/favicon.ico">
+    <link rel="icon" href="./assets/favicon/favicon-32x32.png">
+    <link rel="icon" href="./assets/favicon/favicon-32x32.png">
+    <link rel="apple-touch-icon" href="./assets/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="./assets/favicon/site.webmanifest">
   </head>
   <body class="font-bakh dark:bg-[#060C18]" dir="rtl">
     <div
@@ -16,7 +21,7 @@
         opacity: 40%;
         visibility: hidden;
       "
-      class="fixed inset-0 cursor-pointer"
+      class="fixed inset-0 cursor-pointer md:hidden"
     ></div>
     <!-- هدر موبایل -->
     <header class="md:hidden">
@@ -75,7 +80,7 @@
     <!-- منوی کناری (سمت چپ) -->
     <div
       id="sidebar"
-      class="hidden bg-neutral-11 absolute top-0 right-0 w-[76%] h-[1038px] shadow-[0px_16px_58.5px_rgba(0,0,0,0.06)] z-[1000] mb-[12px] dark:bg-[#091120] md:w-[272px] md:h-[984px] md:absolute md:mt-[34px] md:rounded-[16px] md:block md:right-[19px]"
+      class="hidden bg-neutral-11 absolute top-0 right-0 w-[76%] h-[96%] shadow-[0px_16px_58.5px_rgba(0,0,0,0.06)] z-[1000] mb-[12px] dark:bg-[#091120] md:w-[272px] md:h-[96%] md:fixed md:bottom-[20px] md:top-[20px] md:rounded-[16px] md:block md:right-[19px]"
     >
       <!-- دکمه بستن (فقط برای موبایل) -->
       <div
@@ -151,12 +156,12 @@
 
       <!-- منوی اصلی -->
       <div
-        class="w-full flex flex-col gap-4 px-4 absolute top-[96px] md:top-[192px] md:absolute"
+        class="w-full flex flex-col gap-4 px-4 absolute top-[96px] md:top-[192px] md:absolute h-[41%]"
       >
         <div
-          class="w-full h-[44px] pr-[20px] py-[12px] rounded-lg hover:bg-gray-100 bg-[#F5FAFF] dark:bg-[#041933] dark:hover:bg-[#0C1B31] transition-colors cursor-pointer"
+          class="w-full h-[10%] pr-[20px] py-[12px] rounded-lg hover:bg-gray-100 bg-[#F5FAFF] dark:bg-[#041933] dark:hover:bg-[#0C1B31] transition-colors cursor-pointer flex items-center "
         >
-          <div class="flex items-center gap-4">
+          <div class="flex items-center gap-4 h-[45%]">
             <svg
               width="20"
               height="20"
@@ -170,16 +175,16 @@
               />
             </svg>
             <span
-              class="text-[16px] font-semibold text-[#007BFF] dark:text-neutral-11"
+              class=" h-[20px] text-[16px] font-semibold text-[#007BFF] dark:text-neutral-11"
               >خانه</span
             >
           </div>
         </div>
 
         <div
-          class="w-full h-[36px] px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-[#0C1B31] transition-colors cursor-pointer"
+          class="w-full h-[8.91%] px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-[#0C1B31] transition-colors cursor-pointer"
         >
-          <div class="flex items-center gap-4">
+          <div class="flex items-center gap-4 h-[55.5%]">
             <svg
               width="20"
               height="20"
@@ -219,16 +224,16 @@
               />
             </svg>
             <span
-              class="text-[14px] font-semibold text-[#525252] dark:text-neutral-11"
+              class="h-[14px] text-[14px] font-semibold text-[#525252] dark:text-neutral-11"
               >تسک‌ها</span
             >
           </div>
         </div>
 
         <div
-          class="w-full h-[36px] px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-[#0C1B31] transition-colors cursor-pointer"
+          class="w-full h-[8.91%] px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-[#0C1B31] transition-colors cursor-pointer"
         >
-          <div class="flex items-center gap-4">
+          <div class="flex items-center gap-4 h-[55.5%]">
             <svg
               width="20"
               height="20"
@@ -289,16 +294,16 @@
               />
             </svg>
             <span
-              class="text-[14px] font-semibold text-[#525252] dark:text-neutral-11"
+              class="h-[14px] text-[14px] font-semibold text-[#525252] dark:text-neutral-11"
               >تقویم</span
             >
           </div>
         </div>
 
         <div
-          class="w-full h-[36px] px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-[#0C1B31] transition-colors cursor-pointer"
+          class="w-full h-[8.91%] px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-[#0C1B31] transition-colors cursor-pointer"
         >
-          <div class="flex items-center gap-4">
+          <div class="flex items-center gap-4 h-[55.5%]">
             <svg
               width="20"
               height="20"
@@ -334,16 +339,16 @@
               />
             </svg>
             <span
-              class="text-[14px] font-semibold text-[#525252] dark:text-neutral-11"
+              class="h-[14px] text-[14px] font-semibold text-[#525252] dark:text-neutral-11"
               >گزارشات</span
             >
           </div>
         </section>
 
         <div
-          class="w-full h-[36px] px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-[#0C1B31] transition-colors cursor-pointer"
+          class="w-full h-[8.91%] px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-[#0C1B31] transition-colors cursor-pointer"
         >
-          <div class="flex items-center gap-4">
+          <div class="flex items-center gap-4 h-[55.5%]">
             <svg
               width="20"
               height="20"
@@ -364,16 +369,16 @@
               />
             </svg>
             <span
-              class="text-[14px] font-semibold text-[#525252] dark:text-neutral-11"
+              class="h-[14px] text-[14px] font-semibold text-[#525252] dark:text-neutral-11"
               >تنظیمات</span
             >
           </div>
         </div>
 
         <div
-          class="w-full h-[36px] px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-[#0C1B31] transition-colors cursor-pointer"
+          class="w-full h-[8.91%] px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-[#0C1B31] transition-colors cursor-pointer"
         >
-          <div class="flex items-center gap-4">
+          <div class="flex items-center gap-4 h-[55.5%]">
             <svg
               width="20"
               height="20"
@@ -399,16 +404,16 @@
               />
             </svg>
             <span
-              class="text-[14px] font-semibold text-[#525252] dark:text-neutral-11"
+              class="h-[14px] text-[14px] font-semibold text-[#525252] dark:text-neutral-11"
               >پشتیبانی</span
             >
           </div>
         </div>
 
         <div
-          class="w-full h-[36px] px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-[#0C1B31] transition-colors cursor-pointer"
+          class="w-full h-[8.91%] px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-[#0C1B31] transition-colors cursor-pointer"
         >
-          <div class="flex items-center gap-4">
+          <div class="flex items-center gap-4 h-[55.5%]">
             <svg
               width="20"
               height="20"
@@ -429,7 +434,7 @@
               />
             </svg>
             <span
-              class="text-[14px] font-semibold text-[#525252] dark:text-neutral-11"
+              class="h-[14px] text-[14px] font-semibold text-[#525252] dark:text-neutral-11"
               >پروفایل</span
             >
           </div>
@@ -438,7 +443,7 @@
 
       <!-- تم و خروج -->
       <div
-        class="absolute bottom-6 left-0 right-0 px-4 flex flex-col gap-[24px]"
+        class="absolute top-[75%] h-[12.8%] left-0 right-0 px-4 flex flex-col gap-[24px]"
       >
         <div
           class="w-full bg-[#F7F7F7] dark:bg-[#0C1B31] rounded-lg p-1 flex items-center justify-between"

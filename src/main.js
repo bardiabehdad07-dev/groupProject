@@ -268,7 +268,7 @@ function createTaskTemplate(task) {
 
   return `
     <div class="task-card w-full bg-white dark:bg-[#091120] border border-[#EBEBEB] dark:border-[#091120] rounded-[20px] p-4 relative" data-priority="${task.priority}">
-      <span class="pointer-events-none absolute inset-y-4 right-0 w-1 rounded-full ${config.barBg}"></span>
+      <span class="pointer-events-none absolute inset-y-4 right-0 w-1 rounded-l-[8px] ${config.barBg}"></span>
       
       <div class="absolute top-4 left-4 z-20">
         <button type="button" class="task-menu-btn block focus:outline-none cursor-pointer" aria-label="گزینه‌های تسک">
@@ -314,7 +314,7 @@ function createDoneTaskTemplate(task) {
 
   return `
     <div class="task-card w-full bg-white dark:bg-[#091120] border border-[#EBEBEB] dark:border-[#091120] rounded-[20px] p-4 relative" data-priority="${task.priority}">
-      <span class="pointer-events-none absolute inset-y-4 right-0 w-1 rounded-full ${config.barBg}"></span>
+      <span class="pointer-events-none absolute inset-y-4 right-0 w-1 rounded-l-[8px] ${config.barBg}"></span>
       <label class="absolute top-4 right-4 h-[19px] w-[19px] cursor-pointer">
         <input type="checkbox" data-id="${task.id}" checked class="task-checkbox peer appearance-none h-[19px] w-[19px] rounded border border-[#CCCCCC] checked:bg-[#007BFF] checked:border-[#007BFF] transition cursor-pointer" />
         <svg class="pointer-events-none absolute inset-0 h-full w-full p-[3px] text-white opacity-100" viewBox="0 0 12 12" fill="none">
