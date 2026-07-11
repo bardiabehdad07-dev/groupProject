@@ -313,8 +313,25 @@ function createDoneTaskTemplate(task) {
   const config = priorityConfigs[task.priority] || priorityConfigs["low"];
 
   return `
-    <div class="task-card w-full bg-white dark:bg-[#091120] border border-[#EBEBEB] dark:border-[#091120] rounded-[20px] p-4 relative" data-priority="${task.priority}">
+    <div class="flex task-card w-full bg-white dark:bg-[#091120] border border-[#EBEBEB] dark:border-[#091120] rounded-[20px] p-4 relative" data-priority="${task.priority}">
       <span class="pointer-events-none absolute inset-y-4 right-0 w-1 rounded-l-[8px] ${config.barBg}"></span>
+       <div class="absolute top-4 left-4 z-20">
+        <button type="button" class="task-menu-btn block focus:outline-none cursor-pointer" aria-label="گزینه‌های تسک">
+          <img src="./src/img/dotdot.svg" alt="dot menu" class="w-4 h-4 object-contain pointer-events-none dark:hidden" />
+          <img src="./src/img/dotdot_dark.svg" alt="dot menu" class="w-4 h-4 object-contain pointer-events-none hidden dark:block" />
+        </button>
+        
+        <div class="task-dropdown hidden absolute top-6 left-0 mt-2 flex items-center bg-white dark:bg-[#0C1B31] border border-[#E5E5E5] dark:border-[#3D3D3D] rounded-lg shadow-md z-30 min-w-max overflow-hidden">
+          <button type="button" class="delete-task-btn flex items-center justify-center py-2 px-3 hover:bg-gray-50 dark:hover:bg-[#132A4C] border-l border-[#E5E5E5] dark:border-[#3D3D3D] transition cursor-pointer" data-id="${task.id}" title="حذف">
+            <img src="./src/img/trash.svg" alt="Delete" class="w-4 h-4 block dark:hidden" style="min-width: 16px; min-height: 16px;" />
+            <img src="./src/img/trash-dark.svg" alt="Delete" class="w-4 h-4 hidden dark:block" style="min-width: 16px; min-height: 16px;" />
+          </button>
+          <button type="button" class="edit-task-btn flex items-center justify-center py-2 px-3 hover:bg-gray-50 dark:hover:bg-[#132A4C] transition cursor-pointer" data-id="${task.id}" title="ویرایش">
+            <img src="./src/img/edit.svg" alt="Edit" class="w-4 h-4 block dark:hidden" style="min-width: 16px; min-height: 16px;" />
+            <img src="./src/img/edit-dark.svg" alt="Edit" class="w-4 h-4 hidden dark:block" style="min-width: 16px; min-height: 16px;" />
+          </button>
+        </div>
+      </div>
       <label class="absolute top-4 right-4 h-[19px] w-[19px] cursor-pointer">
         <input type="checkbox" data-id="${task.id}" checked class="task-checkbox peer appearance-none h-[19px] w-[19px] rounded border border-[#CCCCCC] checked:bg-[#007BFF] checked:border-[#007BFF] transition cursor-pointer" />
         <svg class="pointer-events-none absolute inset-0 h-full w-full p-[3px] text-white opacity-100" viewBox="0 0 12 12" fill="none">
@@ -324,6 +341,11 @@ function createDoneTaskTemplate(task) {
       <div class="pr-7">
         <h3 class="text-base font-bold text-[#222222] dark:text-white line-through">${task.title}</h3>
       </div>
+
+    
+
+</div>
+      
     </div>
   `;
 }
@@ -500,7 +522,65 @@ taskList.addEventListener("click", (e) => {
 
 doneTaskList.addEventListener("click", (e) => {
   handleCheckboxChange(e);
+
+  const menuBtn = e.target.closest(".task-menu-btn");
+  if (menuBtn) {
+    e.stopPropagation();
+
+    const currentDropdown = menuBtn.nextElementSibling;
+
+    document.querySelectorAll(".task-dropdown").forEach((dropdown) => {
+      if (dropdown !== currentDropdown) {
+        dropdown.classList.add("hidden");
+      }
+    });
+
+    currentDropdown.classList.toggle("hidden");
+    return;
+  }
+
+  const deleteBtn = e.target.closest(".delete-task-btn");
+  if (deleteBtn) {
+    e.stopPropagation();
+
+    const idToDelete = Number(deleteBtn.dataset.id);
+
+    tasks = tasks.filter((task) => task.id !== idToDelete);
+
+    saveToLocalStorage();
+    renderAll();
+
+    return;
+  }
+
+  const editBtn = e.target.closest(".edit-task-btn");
+  if (editBtn) {
+    e.stopPropagation();
+
+    const idToEdit = Number(editBtn.dataset.id);
+
+    const taskToEdit = tasks.find((task) => task.id === idToEdit);
+
+    if (taskToEdit) {
+      editingTaskId = taskToEdit.id;
+
+      createTaskCard.classList.remove("hidden");
+      openCreateTaskBtn.parentElement.classList.add("hidden");
+      emptyState.classList.add("hidden");
+
+      taskTitleInput.value = taskToEdit.title;
+      taskDescInput.value = taskToEdit.desc;
+
+      setFormPriority(taskToEdit.priority);
+
+      submitTaskBtn.textContent = "ویرایش وظیفه";
+
+      renderAll();
+    }
+  }
 });
+
+
 
 document.addEventListener("click", () => {
   document.querySelectorAll(".task-dropdown").forEach((dropdown) => {
