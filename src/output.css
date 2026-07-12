@@ -7,8 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-500: oklch(63.7% 0.237 25.331);
-    --color-orange-500: oklch(70.5% 0.213 47.604);
     --color-blue-50: oklch(97% 0.014 254.604);
     --color-blue-600: oklch(54.6% 0.245 262.881);
     --color-gray-50: oklch(98.5% 0.002 247.839);
@@ -28,8 +26,6 @@
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
-    --text-2xl: 1.5rem;
-    --text-2xl--line-height: calc(2 / 1.5);
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
@@ -234,8 +230,11 @@
   .top-6 {
     top: calc(var(--spacing) * 6);
   }
-  .top-\[6\.5\%\] {
-    top: 6.5%;
+  .top-\[9\.5\%\] {
+    top: 9.5%;
+  }
+  .top-\[12\.5\%\] {
+    top: 12.5%;
   }
   .top-\[12px\] {
     top: 12px;
@@ -246,14 +245,14 @@
   .top-\[19\.5\%\] {
     top: 19.5%;
   }
-  .top-\[21\%\] {
-    top: 21%;
-  }
   .top-\[23\%\] {
     top: 23%;
   }
   .top-\[73\%\] {
     top: 73%;
+  }
+  .top-\[88px\] {
+    top: 88px;
   }
   .right-0 {
     right: 0;
@@ -375,15 +374,6 @@
   .h-\[19px\] {
     height: 19px;
   }
-  .h-\[20\.5\%\] {
-    height: 20.5%;
-  }
-  .h-\[20\.5\] {
-    height: 20.5;
-  }
-  .h-\[20\.56px\] {
-    height: 20.56px;
-  }
   .h-\[20px\] {
     height: 20px;
   }
@@ -435,9 +425,6 @@
   .w-\[19px\] {
     width: 19px;
   }
-  .w-\[20\.5\%\] {
-    width: 20.5%;
-  }
   .w-\[24px\] {
     width: 24px;
   }
@@ -464,6 +451,9 @@
   }
   .w-\[202px\] {
     width: 202px;
+  }
+  .w-\[328px\] {
+    width: 328px;
   }
   .w-full {
     width: 100%;
@@ -707,41 +697,11 @@
   .py-\[12px\] {
     padding-block: 12px;
   }
-  .pr-2 {
-    padding-right: calc(var(--spacing) * 2);
-  }
   .pr-4 {
     padding-right: calc(var(--spacing) * 4);
   }
   .pr-7 {
     padding-right: calc(var(--spacing) * 7);
-  }
-  .pr-12 {
-    padding-right: calc(var(--spacing) * 12);
-  }
-  .pr-48 {
-    padding-right: calc(var(--spacing) * 48);
-  }
-  .pr-120 {
-    padding-right: calc(var(--spacing) * 120);
-  }
-  .pr-175 {
-    padding-right: calc(var(--spacing) * 175);
-  }
-  .pr-180 {
-    padding-right: calc(var(--spacing) * 180);
-  }
-  .pr-200 {
-    padding-right: calc(var(--spacing) * 200);
-  }
-  .pr-240 {
-    padding-right: calc(var(--spacing) * 240);
-  }
-  .pr-250 {
-    padding-right: calc(var(--spacing) * 250);
-  }
-  .pr-300 {
-    padding-right: calc(var(--spacing) * 300);
   }
   .pr-\[20px\] {
     padding-right: 20px;
@@ -1022,6 +982,11 @@
       top: 6.5%;
     }
   }
+  .md\:top-\[9\.5\%\] {
+    @media (width >= 48rem) {
+      top: 9.5%;
+    }
+  }
   .md\:top-\[19\.5\%\] {
     @media (width >= 48rem) {
       top: 19.5%;
@@ -1030,16 +995,6 @@
   .md\:top-\[20px\] {
     @media (width >= 48rem) {
       top: 20px;
-    }
-  }
-  .md\:top-\[21\%\%\] {
-    @media (width >= 48rem) {
-      top: 21%%;
-    }
-  }
-  .md\:top-\[21\%\] {
-    @media (width >= 48rem) {
-      top: 21%;
     }
   }
   .md\:top-\[64px\] {
